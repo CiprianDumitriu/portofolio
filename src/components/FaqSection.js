@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import { About } from "../styles";
+import Toggle from "./Toggle";
 
 const FaqSection = () => {
     return (
         <Faq>
             <h2>Any questions <span>FAQ</span></h2>
+            <Toggle>
             <div className="question">
                 <h4>How do I start?</h4>
                 <div className="answer">
@@ -14,6 +16,7 @@ const FaqSection = () => {
                 </div>
                 <div className="faq-line"></div>
             </div>
+            </Toggle>
             <div className="question">
                 <h4>Daily schedule</h4>
                 <div className="answer">
