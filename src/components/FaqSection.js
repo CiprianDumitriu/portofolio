@@ -3,44 +3,43 @@ import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
 
+
 const FaqSection = () => {
     return (
         <Faq>
             <h2>Any questions <span>FAQ</span></h2>
-            <Toggle>
-            <div className="question">
-                <h4>How do I start?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+            <Toggle title="How do I start?">
+                <div className="question">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+                    </div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
             </Toggle>
-            <div className="question">
-                <h4>Daily schedule</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+            <Toggle title="Daily Schedule">
+                <div className="question">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+                    </div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>Diferrent Payment Methods</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+            </Toggle>
+            <Toggle title="Different Payment Methods">
+                <div className="question">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+                    </div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
-            <div className="question">
-                <h4>What products do you offer?</h4>
-                <div className="answer">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+            </Toggle>
+            <Toggle title="What prodocts do you offer?">
+                <div className="question">
+                    <div className="answer">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
+                    </div>
                 </div>
-                <div className="faq-line"></div>
-            </div>
+            </Toggle>
         </Faq>
     )
 }
