@@ -1,12 +1,24 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled from "styled-components";
 import { About } from "../styles";
 import Toggle from "./Toggle";
+import { fade } from "../animation";
+import { useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 const FaqSection = () => {
+    const controls = useAnimation()
+    const [element, view] = useInView({ threshold: 0.5})
+    useEffect(() => {
+        if (view) {
+            controls.start("show")
+        } else {
+            controls.start("hidden")
+        }
+    })
     return (
-        <Faq>
+        <Faq variants={fade} ref={element} animate={controls} initial="hidden">
             <h2>Any questions <span>FAQ</span></h2>
             <Toggle title="How do I start?">
                 <div className="question">
@@ -22,7 +34,7 @@ const FaqSection = () => {
                         <p>Lorem ipsum dolor sit amet.</p>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, expedita.</p>
                     </div>
-                </div>
+                </div>  
             </Toggle>
             <Toggle title="Different Payment Methods">
                 <div className="question">
