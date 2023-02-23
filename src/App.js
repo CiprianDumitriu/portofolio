@@ -11,6 +11,7 @@ import MovieDetail from "./pages/MovieDetails";
 import {Routes, Route, Outlet, useLocation} from "react-router-dom";
 // Animation
 import { AnimatePresence } from "framer-motion";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   const location = useLocation()
@@ -18,7 +19,9 @@ function App() {
     <div className="App">
       <GlobalStyle />
       <Nav />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={() => {
+        window.scrollTo(0, 0)
+      }}>
         <Routes location={location} key={location.pathname}>
           <Route path="/" exact element={<AboutUs />}/>
           <Route path="/aboutus" exact element={<AboutUs />}/>

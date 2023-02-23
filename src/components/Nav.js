@@ -29,6 +29,9 @@ const StyledNav = styled.nav`
     align-items: center;
     padding: 1rem 10rem;
     background: #282828;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     a {
         color: white;
         text-decoration: none;
@@ -45,6 +48,23 @@ const StyledNav = styled.nav`
     li {
         padding-left: 10rem;
         position: relative;
+    }
+    @media (max-width: 1300px) {
+        flex-direction: column;
+        padding: 1rem;
+        justify-content: space-around;
+        width: 100%;
+        #logo {
+            padding: 5rem;
+        }
+        ul {
+            padding: 2rem;
+            justify-content: space-around;
+            width: 100%;
+            li {
+                padding: 0;
+            }
+        }
     }
 `
 
