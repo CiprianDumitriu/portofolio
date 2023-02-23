@@ -23,7 +23,7 @@ function App() {
         window.scrollTo(0, 0)
       }}>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" exact element={<AboutUs />}/>
+          <Route path="/portofolio" exact element={<AboutUs />}/>
           <Route path="/aboutus" exact element={<AboutUs />}/>
           <Route path="/ourwork" exact element={<OurWork />}/>
           <Route path="/ourwork/:id"  element={<MovieDetail />}/>
